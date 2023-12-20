@@ -1,0 +1,188 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+
+}
+
+.color {
+    color: #1F305E;
+    font-weight: 900;
+    font-size: 10px;
+
+}
+
+.color:hover {
+    color: black;
+}
+
+.custom-bg {
+    background: linear-gradient(to right, #02606d, #113b49, #0f2027);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.custom-color {
+    background: linear-gradient(to right, #02606d, #113b49, #0f2027);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.config {
+    font-size: 15px;
+}
+
+.custom-bg:hover {
+    color: black;
+}
+
+
+.space-between-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.config-space{
+    font-size: 23px;
+    margin-left: 2vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-font h2 {
+    font-size: 5rem;
+    cursor: pointer;
+
+}
+
+.custom-font {
+    padding: 46px;
+}
+
+.custom-border{
+    padding: 6px;
+    border-radius: 50%;
+    background-color: orange;
+}
+.custom-space{
+    margin-top: 1vw;
+}
+.custom-margin{
+    margin-left: 1vw;
+    cursor: pointer;
+}
+.custom-space-1{
+    margin-top: 8vw;
+}
+
+.custom-style{
+    margin-left: 41px;
+  font-size: 22px;
+  margin-top: 2vw;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate {
+    animation: slideIn 1s ease; /* Adjust the duration and timing function as needed */
+}
+
+@media screen and (min-width: 412px) and (min-height: 915px) {
+    
+.custom-style{
+    margin-left: 41px;
+  font-size: 22px;
+  margin-top: 2vw;
+}
+
+.custom-style{
+    margin-left: -8px;
+    font-size: 11px;
+    margin-top: 12vw;
+}
+
+    .custom-font h2 {
+        font-size: 1rem;
+        cursor: pointer;
+
+    }
+    .custom-space-1{
+        margin-top: 12vw;
+    }
+    .custom-font {
+        padding: 3px;
+    }
+
+    i:hover {
+        cursor: pointer;
+    }
+
+    .custom-bg:hover {
+        color: black;
+    }
+
+    .color:hover {
+        color: black;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .custom-font h2 {
+        font-size: 1rem;
+        cursor: pointer;
+
+    }
+    .custom-space-1{
+        margin-top: 12vw;
+    }
+    .custom-font {
+        padding: 3px;
+    }
+
+    i:hover {
+        cursor: pointer;
+    }
+
+    .custom-bg:hover {
+        color: black;
+    }
+
+    .color:hover {
+        color: black;
+    }
+    .custom-style{
+        margin-left: -8px;
+        font-size: 11px;
+        margin-top: 12vw;
+    }
+    
+
+}
