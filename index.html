@@ -18,44 +18,107 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito:ital,wght@0,800;1,500&family=Poppins:ital,wght@1,100&display=swap"
         rel="stylesheet">
+        <style>
+            .preloader {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                z-index: 999999;
+                background: -webkit-linear-gradient(-90deg, #124656 0%, #063a4a 45%, #063b46 100%);
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+        
+            .preloader .loader {
+                display: inline-block;
+                width: 45px;
+                height: 45px;
+                position: absolute;
+                z-index: 3;
+                border: 4px solid white;
+                top: 50%;
+                -webkit-animation: loader 2.5s infinite ease;
+                animation: loader 2.5s infinite ease;
+            }
+        
+            .preloader .loader .loader-inner {
+                vertical-align: top;
+                display: inline-block;
+                width: 100%;
+                background-color: white;
+                -webkit-animation: loader-inner 2.5s infinite ease-in;
+                animation: loader-inner 2.5s infinite ease-in;
+            }
+        
+            @keyframes loader {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+        
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+        
+            @keyframes loader-inner {
+                0% {
+                    height: 0%;
+                }
+        
+                100% {
+                    height: 100%;
+                }
+            }
+        </style>
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
 
-            <!-- Sidebar -->
             <div class="col-3 custom-color min-vh-100 ">
-                <!-- Sidebar content goes here -->
                 <div class="container-fluid position-fixed">
                     <div class="row">
-                        <div class="col-2.4 custom-font animate ">
+                        <div class="col-2.4 custom-font animate">
                             <h2>YODO</h2>
                         </div>
-                        <div class="col-2.4 custom-style ">
-                            <i class="fa fa-user custom-margin" aria-hidden="true" aria-expanded="true"></i><span
-                                class="custom-margin ">Client</span>
+                        <div class="col-2.4 custom-style">
+                            <i class="fa fa-user custom-margin" aria-hidden="true" aria-expanded="true"></i>
+                            <span class="custom-margin hover-effect">Client</span>
                         </div>
-                        <div class="col-2.4 custom-style ">
-                            <i class="fa-solid fa-globe  custom-margin"></i> <span class="custom-margin">Websites</span>
+                        <div class="col-2.4 custom-style">
+                            <i class="fa-solid fa-globe custom-margin"></i>
+                            <span class="custom-margin hover-effect">Websites</span>
                         </div>
-                        <div class="col-2.4  custom-style">
+                        <div class="col-2.4 custom-style">
                             <i class="fa fa-plug custom-margin" aria-hidden="true"></i>
-                            <span class="custom-margin">Plugins</span>
+                            <span class="custom-margin hover-effect">Plugins</span>
                         </div>
-                        <div class="col-2.4  custom-style">
+                        <div class="col-2.4 custom-style">
                             <i class="fas fa-user-shield custom-margin"></i>
-                            <span class="custom-margin">Security</span>
+                            <span class="custom-margin hover-effect">Security</span>
                         </div>
-
-
                     </div>
+
                 </div>
             </div>
 
-            <!-- Content Area -->
             <div class="col-9 min-vh-100">
-                <!-- Main content goes here -->
+
                 <nav class="navbar  custom-bg ">
                     <div class="container-fluid">
 
@@ -71,80 +134,84 @@
                 </nav>
                 <div class="container-fluid">
                     <div class="row">
+
                         <div class="col-12">
+                            <marquee behavior="scroll" direction="right">
+                                <h1> Welcome to Home Page !</h1>
+                            </marquee>
                             <div class="accordion custom-space-1" id="accordionExample">
-                                <div class="accordion-item">
+                                <div class="accordion-item mt-5">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button custom-bg" type="button"
+                                        <button class="accordion-button collapsed custom-bg" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                            aria-controls="collapseOne">
-                                            <i class="fa fa-user custom-margin" aria-hidden="true"
-                                                aria-expanded="true"></i><span class="custom-margin">Client</span>
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            <i class="fa fa-user custom-margin"></i><span
+                                                class="custom-margin">Client</span>
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse "
+                                    <div id="collapseOne" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div class="container custom-space">
                                                 <div class="row">
-                                                    <div class="col-sm-2">
+                                                    <!-- First Three Items in First Row -->
+                                                    <div class="col-sm-4">
                                                         <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa-solid fa-house color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Home </a>
+                                                                    href="#">Home </a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-4">
                                                         <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa-solid fa-globe color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html"> Websites</a>
+                                                                    href="#">Websites</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-plug color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">Global Plugins</a>
+                                                                    href="#">Global Plugins</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+
+                                                    <!-- Next Three Items in Second Row -->
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-cog color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Global Configuration</a>
+                                                                    href="#">Global
+                                                                    Configuration</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fas fa-user-shield color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Security</a>
+                                                                    href="#">Security</a>
                                                             </li>
                                                         </ul>
-
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-exchange color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">Migration</a>
+                                                                    href="#">Migration</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -152,6 +219,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div class="accordion-item  mt-5">
                                     <h2 class="accordion-header">
@@ -167,64 +235,62 @@
                                         <div class="accordion-body">
                                             <div class="container custom-space">
                                                 <div class="row">
-                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-4">
                                                         <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa-solid fa-house color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Home </a>
+                                                                    href="#">Home </a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-4">
                                                         <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa-solid fa-globe color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html"> Websites</a>
+                                                                    href="#"> Websites</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-plug color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">Global Plugins</a>
+                                                                    href="#">Global Plugins</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-cog color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Global Configuration</a>
+                                                                    href="#">Global
+                                                                    Configuration</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fas fa-user-shield color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Security</a>
+                                                                    href="#">Security</a>
                                                             </li>
                                                         </ul>
-
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-exchange color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">Migration</a>
+                                                                    href="#">Migration</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -232,6 +298,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div class="accordion-item  mt-5">
                                     <h2 class="accordion-header">
@@ -247,64 +314,62 @@
                                         <div class="accordion-body">
                                             <div class="container custom-space">
                                                 <div class="row">
-                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-4">
                                                         <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa-solid fa-house color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Home </a>
+                                                                    href="#">Home </a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-4">
                                                         <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa-solid fa-globe color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html"> Websites</a>
+                                                                    href="#"> Websites</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-plug color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">Global Plugins</a>
+                                                                    href="#">Global Plugins</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-cog color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Global Configuration</a>
+                                                                    href="#">Global
+                                                                    Configuration</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fas fa-user-shield color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Security</a>
+                                                                    href="#">Security</a>
                                                             </li>
                                                         </ul>
-
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-exchange color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">Migration</a>
+                                                                    href="#">Migration</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -312,6 +377,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div class="accordion-item  mt-5">
                                     <h2 class="accordion-header">
@@ -327,64 +393,62 @@
                                         <div class="accordion-body">
                                             <div class="container custom-space">
                                                 <div class="row">
-                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-4">
                                                         <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa-solid fa-house color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Home </a>
+                                                                    href="#">Home </a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-4">
                                                         <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa-solid fa-globe color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html"> Websites</a>
+                                                                    href="#"> Websites</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-plug color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">Global Plugins</a>
+                                                                    href="#">Global Plugins</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-cog color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Global Configuration</a>
+                                                                    href="#">Global
+                                                                    Configuration</a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fas fa-user-shield color custom-border"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">
-                                                                    Security</a>
+                                                                    href="#">Security</a>
                                                             </li>
                                                         </ul>
-
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <ul class=" d-flex justify-content-between list-inline">
+                                                    <div class="col-sm-4">
+                                                        <ul class="d-flex justify-content-between list-inline">
                                                             <li>
                                                                 <i class="fa fa-exchange color custom-border"
                                                                     aria-hidden="true"></i>
                                                                 <a class="list-inline-item color text-decoration-none ms-2"
-                                                                    href="./dummy.html">Migration</a>
+                                                                    href="#">Migration</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -392,6 +456,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
 
@@ -405,6 +470,15 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
                 crossorigin="anonymous"></script>
-</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+       
+        var preloader = document.querySelector('.preloader');
+       setTimeout(function () {
+            preloader.remove(); 
+        }, 3000); 
+    });
+</script>
+            </body>
 
 </html>
